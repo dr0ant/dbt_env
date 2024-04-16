@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: raw_data_btc_perp
+    description: "btc data captured from broker"
+    database: aoavfbel
+    schema: wizetrading
+    tables:
+      - name: 'raw_data'
+        description: "data collectée depuis binance"
