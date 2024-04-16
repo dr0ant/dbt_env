@@ -1,0 +1,229 @@
+[0m15:04:00.443193 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F5EAEA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F86CCC70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F86CCCA0>]}
+
+
+============================== 15:04:00.443193 | e087e9ea-1071-4906-a4f3-5d03fbc14c01 ==============================
+[0m15:04:00.443193 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:04:00.443193 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alarcher\\.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'invocation_command': 'dbt init dbt_wizetrading', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m15:04:00.443193 [error] [MainThread]: Encountered an error:
+[ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+[0m15:04:00.476803 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 608, in _ConvertFieldValuePair
+    _ConvertScalarFieldValue(value, field,
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 779, in _ConvertScalarFieldValue
+    if _UNPAIRED_SURROGATE_PATTERN.search(value):
+TypeError: expected string or bytes-like object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 72, in __init__
+    self.pb_msg = ParseDict(kwargs, msg_cls())
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 446, in ParseDict
+    parser.ConvertMessage(js_dict, message, '')
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 487, in ConvertMessage
+    self._ConvertFieldValuePair(value, message, path)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 622, in _ConvertFieldValuePair
+    raise ParseError(
+google.protobuf.json_format.ParseError: Failed to parse dir field: expected string or bytes-like object.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 298, in run
+    self.create_profiles_dir(profiles_dir)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 70, in create_profiles_dir
+    fire_event(ConfigFolderDirectory(dir=profiles_dir))
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 81, in __init__
+    raise Exception(error_msg)
+Exception: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+
+[0m15:04:00.482650 [debug] [MainThread]: Command `dbt init` failed at 15:04:00.482650 after 0.05 seconds
+[0m15:04:00.482650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F5EAEA30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F871DEB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D4F871D160>]}
+[0m15:04:00.482650 [debug] [MainThread]: Flushing usage events
+[0m15:05:06.460544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C45AD970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C6DCEBB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C6DCEBE0>]}
+
+
+============================== 15:05:06.471087 | 5ef929cf-d7c8-462d-aa85-aad99917d71f ==============================
+[0m15:05:06.471087 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:05:06.472082 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\alarcher\\.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt init', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:05:06.472082 [error] [MainThread]: Encountered an error:
+[ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+[0m15:05:06.474087 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 608, in _ConvertFieldValuePair
+    _ConvertScalarFieldValue(value, field,
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 779, in _ConvertScalarFieldValue
+    if _UNPAIRED_SURROGATE_PATTERN.search(value):
+TypeError: expected string or bytes-like object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 72, in __init__
+    self.pb_msg = ParseDict(kwargs, msg_cls())
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 446, in ParseDict
+    parser.ConvertMessage(js_dict, message, '')
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 487, in ConvertMessage
+    self._ConvertFieldValuePair(value, message, path)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 622, in _ConvertFieldValuePair
+    raise ParseError(
+google.protobuf.json_format.ParseError: Failed to parse dir field: expected string or bytes-like object.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 298, in run
+    self.create_profiles_dir(profiles_dir)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 70, in create_profiles_dir
+    fire_event(ConfigFolderDirectory(dir=profiles_dir))
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 81, in __init__
+    raise Exception(error_msg)
+Exception: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+
+[0m15:05:06.479089 [debug] [MainThread]: Command `dbt init` failed at 15:05:06.479089 after 0.02 seconds
+[0m15:05:06.480087 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C45AD970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C6E1DFA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002C2C6E1DD60>]}
+[0m15:05:06.480087 [debug] [MainThread]: Flushing usage events
+[0m15:11:33.684742 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020376E8EA00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203796ACCA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203796ACCD0>]}
+
+
+============================== 15:11:33.690734 | 641f4dd2-0a23-4372-aa7f-1075ccd9f0ec ==============================
+[0m15:11:33.690734 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:11:33.690734 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\alarcher\\.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt init', 'send_anonymous_usage_stats': 'True'}
+[0m15:11:33.691735 [error] [MainThread]: Encountered an error:
+[ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+[0m15:11:33.693735 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 608, in _ConvertFieldValuePair
+    _ConvertScalarFieldValue(value, field,
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 779, in _ConvertScalarFieldValue
+    if _UNPAIRED_SURROGATE_PATTERN.search(value):
+TypeError: expected string or bytes-like object
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 72, in __init__
+    self.pb_msg = ParseDict(kwargs, msg_cls())
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 446, in ParseDict
+    parser.ConvertMessage(js_dict, message, '')
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 487, in ConvertMessage
+    self._ConvertFieldValuePair(value, message, path)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\google\protobuf\json_format.py", line 622, in _ConvertFieldValuePair
+    raise ParseError(
+google.protobuf.json_format.ParseError: Failed to parse dir field: expected string or bytes-like object.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 298, in run
+    self.create_profiles_dir(profiles_dir)
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\task\init.py", line 70, in create_profiles_dir
+    fire_event(ConfigFolderDirectory(dir=profiles_dir))
+  File "C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\events\base_types.py", line 81, in __init__
+    raise Exception(error_msg)
+Exception: [ConfigFolderDirectory]: Unable to parse dict {'dir': WindowsPath('C:/Users/alarcher/.dbt')}
+
+[0m15:11:33.695736 [debug] [MainThread]: Command `dbt init` failed at 15:11:33.695736 after 0.01 seconds
+[0m15:11:33.696745 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020376E8EA00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203796FDF70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000203796FDF40>]}
+[0m15:11:33.696745 [debug] [MainThread]: Flushing usage events
+[0m15:11:56.265188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001799369D910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017995EBEAF0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017995EBEB80>]}
+
+
+============================== 15:11:56.271188 | 5479648a-bd0d-4eb0-b64a-f07053d67d2b ==============================
+[0m15:11:56.271188 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:11:56.272188 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'profiles_dir': 'C:\\Users\\alarcher\\.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt init', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:12:13.557153 [debug] [MainThread]: Starter project path: C:\Users\alarcher\AppData\Roaming\Python\Python38\site-packages\dbt\include\starter_project
+[0m15:12:13.617879 [info ] [MainThread]: 
+Your new dbt project "dbt_wizetrading" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:12:13.618885 [info ] [MainThread]: Setting up your profile.
+[0m15:13:39.238480 [info ] [MainThread]: Profile dbt_wizetrading written to C:\Users\alarcher\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:13:39.240492 [debug] [MainThread]: Command `dbt init` succeeded at 15:13:39.240492 after 102.98 seconds
+[0m15:13:39.240492 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001799369D910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017995FE3970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017995FDD3A0>]}
+[0m15:13:39.241487 [debug] [MainThread]: Flushing usage events
+[0m15:13:49.559436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230B782F9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230BA0B1340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230BA0B1B50>]}
+
+
+============================== 15:13:49.565441 | 6663ec00-b362-4000-9191-211a0cff5bb2 ==============================
+[0m15:13:49.565441 [info ] [MainThread]: Running with dbt=1.7.11
+[0m15:13:49.565894 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': 'C:\\Users\\alarcher\\.dbt', 'log_path': 'logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:13:49.565894 [info ] [MainThread]: dbt version: 1.7.11
+[0m15:13:49.566957 [info ] [MainThread]: python version: 3.8.2
+[0m15:13:49.567899 [info ] [MainThread]: python path: c:\program files\python38\python.exe
+[0m15:13:49.567899 [info ] [MainThread]: os info: Windows-10-10.0.19041-SP0
+[0m15:13:49.650606 [info ] [MainThread]: Using profiles dir at C:\Users\alarcher\.dbt
+[0m15:13:49.651607 [info ] [MainThread]: Using profiles.yml file at C:\Users\alarcher\.dbt\profiles.yml
+[0m15:13:49.652606 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\alarcher\Documents\dbt\dbt_env\dbt_project.yml
+[0m15:13:49.653607 [info ] [MainThread]: adapter type: postgres
+[0m15:13:49.653607 [info ] [MainThread]: adapter version: 1.7.11
+[0m15:13:49.654607 [info ] [MainThread]: Configuration:
+[0m15:13:49.654607 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:13:49.655561 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m15:13:49.656202 [info ] [MainThread]: Required dependencies:
+[0m15:13:49.656722 [debug] [MainThread]: Executing "git --help"
+[0m15:13:49.727137 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:13:49.727675 [debug] [MainThread]: STDERR: "b''"
+[0m15:13:49.728216 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:13:49.729287 [info ] [MainThread]: Connection:
+[0m15:13:49.729808 [info ] [MainThread]:   host: ella.db.elephantsql.com
+[0m15:13:49.730334 [info ] [MainThread]:   port: 5432
+[0m15:13:49.730847 [info ] [MainThread]:   user: aoavfbel
+[0m15:13:49.731494 [info ] [MainThread]:   database: aoavfbel
+[0m15:13:49.732020 [info ] [MainThread]:   schema: wizetrading
+[0m15:13:49.732558 [info ] [MainThread]:   connect_timeout: 10
+[0m15:13:49.733086 [info ] [MainThread]:   role: None
+[0m15:13:49.733619 [info ] [MainThread]:   search_path: None
+[0m15:13:49.734148 [info ] [MainThread]:   keepalives_idle: 0
+[0m15:13:49.734676 [info ] [MainThread]:   sslmode: None
+[0m15:13:49.735199 [info ] [MainThread]:   sslcert: None
+[0m15:13:49.735726 [info ] [MainThread]:   sslkey: None
+[0m15:13:49.736250 [info ] [MainThread]:   sslrootcert: None
+[0m15:13:49.736766 [info ] [MainThread]:   application_name: dbt
+[0m15:13:49.737282 [info ] [MainThread]:   retries: 1
+[0m15:13:49.737804 [info ] [MainThread]: Registered adapter: postgres=1.7.11
+[0m15:13:49.738349 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m15:13:49.738898 [debug] [MainThread]: Using postgres connection "debug"
+[0m15:13:49.738898 [debug] [MainThread]: On debug: select 1 as id
+[0m15:13:49.739420 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:13:49.962233 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m15:13:49.963245 [debug] [MainThread]: On debug: Close
+[0m15:13:49.963245 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:13:49.964218 [info ] [MainThread]: [31m1 check failed:[0m
+[0m15:13:49.965069 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\alarcher\Documents\dbt\dbt_env\dbt_project.yml> not found
+
+[0m15:13:49.966512 [debug] [MainThread]: Command `dbt debug` failed at 15:13:49.965491 after 0.45 seconds
+[0m15:13:49.966512 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:13:49.966512 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230B782F9D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230B999E100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000230BA2B7CA0>]}
+[0m15:13:49.967507 [debug] [MainThread]: Flushing usage events
